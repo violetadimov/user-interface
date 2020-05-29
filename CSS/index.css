@@ -1,0 +1,395 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.navigation {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  align-items: center;
+}
+.navigation nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.navigation nav a {
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0 5%;
+  font-family: sans-serif;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 1px #CCC;
+  height: 100px;
+  width: 100%;
+  background-color: #fff;
+}
+.headerContent {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  margin: 0 50px;
+  width: 100%;
+  justify-content: space-between;
+}
+.headerContent .mainLogin {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+}
+.headerContent .mainLogin img.userIcon {
+  width: 30px;
+}
+.headerContent .mainLogin .login {
+  margin: 0 5%;
+}
+.headerContent .mainLogin .login h3 {
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+.headerContent .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+}
+.headerContent .logo img {
+  width: 50px;
+}
+.headerContent .logo h2 {
+  font-size: 3rem;
+  font-family: sans-serif;
+}
+.mainContent .container1 {
+  display: flex;
+  justify-content: flex-end;
+}
+.mainContent .container1 img {
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+}
+.mainContent .container1 .loginContainer {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 400px;
+  width: 350px;
+  margin: 2% 15%;
+}
+.mainContent .container1 .loginContainer p {
+  color: inherit;
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 0 30% 2% 25%;
+}
+.mainContent .container1 .loginContainer .loginBtn {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  height: 70%;
+}
+.mainContent .container1 .loginContainer .loginBtn button {
+  width: 70%;
+  border: none;
+  border-radius: 10px;
+  height: 60px;
+  background-color: white;
+  margin: 2% 0;
+  font-size: 1.2rem;
+}
+.mainContent .container1 .loginContainer .loginBtn button:hover {
+  background-color: lightgray;
+}
+.mainContent .container1 .loginContainer .loginBtn button.signUp {
+  background-color: lightsalmon;
+}
+.mainContent .container1 .loginContainer .loginBtn button.signUp:hover {
+  background-color: white;
+}
+.articles {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 19%;
+}
+.card {
+  width: 300px;
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 210px 210px 80px;
+  grid-template-areas: "image" "text" "stats";
+  font-family: sans-serif;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0);
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.card .cardImage {
+  grid-area: image;
+  background: url("https://cdn.cnn.com/cnnnext/dam/assets/200518092451-01-us-apple-store-reopening-0513-medium-plus-169.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+.card .cardText {
+  grid-area: text;
+  margin: 25px;
+}
+.card .cardText .date {
+  color: #fb2525;
+  font-size: 0.9rem;
+}
+.card .cardText p {
+  color: grey;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.card .cardText h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+.card .cardStats {
+  grid-area: stats;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background: lightslategray;
+}
+.card .cardStats .stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+}
+.card .cardStats .type {
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.card .cardStats .value {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.card .cardStats .value sup {
+  font-size: 0.7rem;
+}
+.card .cardStats .cardStats .border {
+  border-left: 1px solid lightslategray;
+  border-right: 1px solid lightslategray;
+}
+.card:hover {
+  transform: scale(1.2);
+  box-shadow: 5px 5px 15px black;
+}
+.loginbox {
+  width: 320px;
+  height: 420px;
+  background: #000;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+.loginbox img {
+  width: 80px;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 40px);
+}
+.loginbox h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: sans-serif;
+}
+.loginbox p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.loginbox input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.loginbox input[type="text"],
+.loginbox input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.loginbox input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #fb2525;
+  font-size: 18px;
+  border-radius: 20px;
+  font-family: sans-serif;
+}
+.loginbox input[type="submit"]:hover {
+  cursor: pointer;
+  background: #ffc107;
+  color: #000;
+}
+.loginbox a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  line-height: 20px;
+  color: darkgrey;
+  font-family: sans-serif;
+}
+.loginbox a :hover {
+  color: #ffc107;
+}
+footer {
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid;
+  margin: 5% 5% 0;
+}
+footer p {
+  margin-bottom: 10px;
+}
+footer a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: black;
+}
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.team h1 {
+  font-size: 1.8rem;
+  font-family: sans-serif;
+}
+.team .member {
+  display: flex;
+  margin: 10% 5% 0;
+  align-items: center;
+}
+.team .picture {
+  width: 30%;
+  margin: 0 5%;
+}
+.team .picture img {
+  width: 60%;
+  border-radius: 50%;
+}
+.team .description {
+  width: 40%;
+}
